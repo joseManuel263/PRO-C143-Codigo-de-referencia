@@ -25,7 +25,7 @@ export default class HomeScreen extends Component {
     this.getMovie();
   }
 
-  /*define getmovie(), likedMovie(), dislikedMovie() ,notWatched() functions here*/
+  /*define las funciones getmovie(), likedMovie(), dislikedMovie() ,notWatched() aquí*/
 
   getMovie = () => {
     const url = this.state.ngrok_url + "/movies";
@@ -88,7 +88,7 @@ export default class HomeScreen extends Component {
             style={{ flex: 1 }}
           >
             <View style={styles.headerContainer}>
-              <Text style={styles.headerTitle}>Movie Recommendation</Text>
+              <Text style={styles.headerTitle}>Recomendación de películas</Text>
               <Icon
                 name="chevron-right"
                 type="feather"
@@ -103,15 +103,15 @@ export default class HomeScreen extends Component {
 
             <View style={styles.subContainer}>
               <View style={styles.posterContainer}>
-                {/*Add the component for poster image below*/}
+                {/*Agrega el componente para la imagen del póster abajo*/}
                 <Image
                   style={styles.posterImage}
                   source={{ uri: poster_link }}
                 />
               </View>
               <View style={{ flex: 0.15 }}>
-                {/*Add the components to show the movie name and 
-                other details ( release date & duration) below*/}
+                {/*Agrega los componentes para mostrar el nombre de la película y otros detalles (fecha de estreno y duración) abajo */}
+                
                 <View style={styles.detailsContainer}>
                   <Text style={styles.title}>{original_title}</Text>
                   <Text style={styles.subtitle}>
@@ -120,11 +120,11 @@ export default class HomeScreen extends Component {
                 </View>
               </View>
               <View style={styles.ratingContainer}>
-                {/*Add the components to show rating of the movie below*/}
+                {/*Agrega los componentes para mostrar las calificaciones de la película abajo*/}
                 <Star score={rating} style={styles.starStyle} />
               </View>
               <View style={styles.iconButtonContainer}>
-                {/*Add the code for like, dislike and notWatched button below*/}
+                {/*Agrega el código para los botones me gusta, no me gusta y no la he visto abajo*/}
                 <TouchableOpacity onPress={this.likedMovie}>
                   <Image
                     style={styles.iconImage}
